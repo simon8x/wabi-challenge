@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Wabi test</title>
+	<!--favicon-->
+	<link rel="icon" type="image/png" href="/images/favicon.png">
+	<!-- bootstrap link -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+		integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
+		integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
+		crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"
+		integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+		crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"
+		integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+		crossorigin="anonymous"></script>
+	<!-- font -->
+	<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap" rel="stylesheet">
+	<!-- icons -->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+	<!-- css normalize & inicialize -->
+	<link href="css/normalize.css" rel="stylesheet">
+	<!-- css styles -->
+	<link href="css/styles.css" rel="stylesheet">
+</head>
+
+<body>
+	<header class="top-header">
+		<!--inicio topbar-->
+		<div class="top-bar container-fluid no-padding">
+			<div class="container no-padding">
+				<div class="row no-gutters justify-content-between">
+					<!--inicio topbar searchform-->
+					<div class="align-self-start  align-self-center">
+						<div class="search-form">
+							<form name="product-search-form" class="product-search-form">
+								<button class="search-form__button" type="submit">
+									<span class="__icon-button material-icons-outlined">search</span>
+								</button><input class="search-form__query" type="text" placeholder="¿Qué estás buscando?">
+							</form>
+						</div>
+					</div>
+					<!--fin topbar searchform-->
+					<!--inicio topbar brand-->
+					<div class="align-self-center hidden-sm-down">
+						<div class="wabi-brand">
+							<svg class="svg-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 41 24">
+								<g>
+										<path d="M9.15 12.458l-.464.592c.147-.19.306-.391.463-.592M36.288 0c-2.224 0-4.026 1.776-4.026 3.967 0 2.19 1.802 3.966 4.026 3.966 2.225 0 4.028-1.776 4.028-3.966C40.316 1.776 38.513 0 36.288 0M.564 8.643l.178.203c.256.295.773.304 1.148.01.372-.296.465-.795.21-1.104l-.004-.004-.604-.709c-.257-.291-.768-.263-1.137.056-.37.315-.467.795-.213 1.074l.422.474zM7.469 12.942c.34-.434.94-1.198 1.44-1.83L6.915 8.527c-.266-.355-.815-.505-1.184-.182-.36.312-.4.778-.155 1.118L4.398 7.857c-.26-.32-.774-.31-1.143.014-.371.32-.462.826-.205 1.133l2.11 2.77a.81.81 0 0 1-.339.799c-.355.247-.838.203-1.112-.079L2.5 11l-.372-.447c-.016-.018-.037-.032-.056-.05-.27-.248-.743-.24-1.092.027-.378.28-.479.739-.223 1.03l.84 1.039c1.688 1.226 3.169 1.377 3.791 1.377.383 0 1.277 0 2.082-1.033M8.686 13.05l-.105.133.105-.133M8.686 13.05l-.105.133.105-.133M9.551 11.947l-.402.51.402-.51M9.551 11.947l-.402.51.402-.51"/>
+										<path d="M17.735 13.547v-.001l-.123-.217-.001-.001c-.95-1.669-3.048-5.357-3.371-5.934C14.018 7 13.93 7 13.87 7c-.194 0-.342.042-.475.096a1037.227 1037.227 0 0 0-3.845 4.852l-.001-.002c-.458.581-.963 1.223-1.262 1.608a3.735 3.735 0 0 1-1.258 1.063l-.055.029c-.063.03-.123.05-.184.076a3.515 3.515 0 0 1-.346.117l-.063.016a4.625 4.625 0 0 1-.187.045c-.022.005-.043.01-.064.013-.048.009-.097.015-.146.023-.073.01-.143.023-.216.029-.062.006-.122.007-.183.01-.066.003-.134.007-.2.007-.065 0-.131-.004-.196-.007a6.762 6.762 0 0 1-2-.396 137.136 137.136 0 0 1 2.528 3.172c.694.922 1.487 1.648 1.929 1.91 2.173 1.333 4.518.222 5.962-1.166l4.42-4.418-.294-.529zM23.361 5.417l-1.025-1.695c-.02-.03-.042-.054-.06-.081a4.699 4.699 0 0 0-.21-.279c-.006-.008-.011-.017-.018-.025a4.294 4.294 0 0 0-.555-.405c-1.85-1.12-4.24-.704-5.493.902v-.005l-1.768 2.217-.204.256c.212-.266.46-.187.696.042.137.137.27.329.393.53.082.132.16.265.228.396l.072.137c.028.055.054.11.077.16l.116.21c.877 1.652 3.159 5.52 3.174 5.547v.002l.179.307.778 1.339.005.01-.014.013c.035.051.073.103.11.153.372.497.943.95 2.05.95.478 0 1.595 0 2.47-1.35.738-1.138 1.706-2.779 2.317-3.83L23.36 5.417z"/>
+										<path d="M32.153 7.933c-1.357 0-2.556.615-3.312 1.562a4.112 4.112 0 0 0-.496.736l-.344.574-.893 1.495-1.806 2.876-.071.112a5.437 5.437 0 0 1-.8.93 3.527 3.527 0 0 1-1.28.718 4.17 4.17 0 0 1-1.259.169c-.393 0-.736-.048-1.042-.125l.675 1.232.654 1.135h-.002c.027.044.046.087.072.132l.22.417c.03.066.054.128.08.191l.495.9c.503.952 1.148 1.69 2.21 2.27l.014-.003c.118.07.24.138.366.198 2.034.977 4.529.173 5.544-1.786l4.567-7.887c.047-.086.083-.176.121-.264.267-.514.423-1.09.423-1.7 0-2.144-1.851-3.882-4.136-3.882"/>
+								</g>
+							</svg>
+						</div>
+					</div>
+					<!--fin topbar brand-->
+					<!--inicio topbar buttons-->
+					<div class="top-buttons align-self-end">
+
+						<div class="language-selector">
+							<label class="select" for="slct">
+								<select id="slct" required="required">
+									<option value="EN" selected="selected">EN</option>
+									<option value="ES">ES</option>
+								</select>
+								<svg>
+									<use xlink:href="#select-arrow-down"></use>
+								</svg>
+							</label>
+							<!-- SVG Sprites-->
+							<svg class="sprites">
+								<symbol id="select-arrow-down" viewbox="0 0 10 6">
+									<polyline points="1 1 5 5 9 1"></polyline>
+								</symbol>
+							</svg>
+						</div>
+						<div class="my-account">
+							<a href="#" class="my-account__button">
+								<span class="head-person-draw"></span>
+								<span class="body-person-draw"></span>
+							</a>
+						</div>
+						<div class="my-cart">
+							<a href="#" class="my-cart__button">
+								<span class="material-icons-outlined">shopping_cart</span>
+								<span class="item-cuantity-intocart">0</span>
+							</a>
+						</div>
+					</div>
+					<!--fin topbar buttons-->
+				</div>
+			</div>
+		</div>
+		<!--fin topbar-->
+		<!--inicio navbar-->
+		<div class="container-fluid	no-padding navbar-container">
+			<div class="container">
+				<!--inicio desktop navbar-->
+				<nav class="navbar-primary hidden-sm-down">
+					<ul class="menu__items menu__items">
+						<li class="menu__item menu__item">
+							<a class="menu__anchor menu__anchor--is-active" href="#">promociones</a>
+						</li>
+						<li class="menu__item menu__item">
+							<a class="menu__anchor" href="#">alcohol</a>
+						</li>
+						<li class="menu__item menu__item">
+							<a class="menu__anchor" href="#">beverages</a>
+						</li>
+						<li class="menu__item menu__item">
+							<a class="menu__anchor" href="#">groceries</a>
+						</li>
+						<li class="menu__item menu__item">
+							<a class="menu__anchor" href="#">beauty and gealdthcare</a>
+						</li>
+						<li class="menu__item menu__item">
+							<a class="menu__anchor" href="#">home cleaning</a>
+						</li>
+					</ul>
+				</nav>
+				<!--fin desktop navbar-->
+				<!--inicio mobile navbar-->
+				<nav class="navbar navbar-toggleable-md navbar-inverse hidden-md-up">
+					<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="material-icons-outlined">menu</span>
+					</button>
+					<a class="navbar-brand" href="#">
+						<div class="align-self-center hidden-md-up">
+							<div class="wabi-brand">
+								<svg class="svg-navbar-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 41 24">
+									<g>
+										<path d="M9.15 12.458l-.464.592c.147-.19.306-.391.463-.592M36.288 0c-2.224 0-4.026 1.776-4.026 3.967 0 2.19 1.802 3.966 4.026 3.966 2.225 0 4.028-1.776 4.028-3.966C40.316 1.776 38.513 0 36.288 0M.564 8.643l.178.203c.256.295.773.304 1.148.01.372-.296.465-.795.21-1.104l-.004-.004-.604-.709c-.257-.291-.768-.263-1.137.056-.37.315-.467.795-.213 1.074l.422.474zM7.469 12.942c.34-.434.94-1.198 1.44-1.83L6.915 8.527c-.266-.355-.815-.505-1.184-.182-.36.312-.4.778-.155 1.118L4.398 7.857c-.26-.32-.774-.31-1.143.014-.371.32-.462.826-.205 1.133l2.11 2.77a.81.81 0 0 1-.339.799c-.355.247-.838.203-1.112-.079L2.5 11l-.372-.447c-.016-.018-.037-.032-.056-.05-.27-.248-.743-.24-1.092.027-.378.28-.479.739-.223 1.03l.84 1.039c1.688 1.226 3.169 1.377 3.791 1.377.383 0 1.277 0 2.082-1.033M8.686 13.05l-.105.133.105-.133M8.686 13.05l-.105.133.105-.133M9.551 11.947l-.402.51.402-.51M9.551 11.947l-.402.51.402-.51"/>
+										<path d="M17.735 13.547v-.001l-.123-.217-.001-.001c-.95-1.669-3.048-5.357-3.371-5.934C14.018 7 13.93 7 13.87 7c-.194 0-.342.042-.475.096a1037.227 1037.227 0 0 0-3.845 4.852l-.001-.002c-.458.581-.963 1.223-1.262 1.608a3.735 3.735 0 0 1-1.258 1.063l-.055.029c-.063.03-.123.05-.184.076a3.515 3.515 0 0 1-.346.117l-.063.016a4.625 4.625 0 0 1-.187.045c-.022.005-.043.01-.064.013-.048.009-.097.015-.146.023-.073.01-.143.023-.216.029-.062.006-.122.007-.183.01-.066.003-.134.007-.2.007-.065 0-.131-.004-.196-.007a6.762 6.762 0 0 1-2-.396 137.136 137.136 0 0 1 2.528 3.172c.694.922 1.487 1.648 1.929 1.91 2.173 1.333 4.518.222 5.962-1.166l4.42-4.418-.294-.529zM23.361 5.417l-1.025-1.695c-.02-.03-.042-.054-.06-.081a4.699 4.699 0 0 0-.21-.279c-.006-.008-.011-.017-.018-.025a4.294 4.294 0 0 0-.555-.405c-1.85-1.12-4.24-.704-5.493.902v-.005l-1.768 2.217-.204.256c.212-.266.46-.187.696.042.137.137.27.329.393.53.082.132.16.265.228.396l.072.137c.028.055.054.11.077.16l.116.21c.877 1.652 3.159 5.52 3.174 5.547v.002l.179.307.778 1.339.005.01-.014.013c.035.051.073.103.11.153.372.497.943.95 2.05.95.478 0 1.595 0 2.47-1.35.738-1.138 1.706-2.779 2.317-3.83L23.36 5.417z"/>
+										<path d="M32.153 7.933c-1.357 0-2.556.615-3.312 1.562a4.112 4.112 0 0 0-.496.736l-.344.574-.893 1.495-1.806 2.876-.071.112a5.437 5.437 0 0 1-.8.93 3.527 3.527 0 0 1-1.28.718 4.17 4.17 0 0 1-1.259.169c-.393 0-.736-.048-1.042-.125l.675 1.232.654 1.135h-.002c.027.044.046.087.072.132l.22.417c.03.066.054.128.08.191l.495.9c.503.952 1.148 1.69 2.21 2.27l.014-.003c.118.07.24.138.366.198 2.034.977 4.529.173 5.544-1.786l4.567-7.887c.047-.086.083-.176.121-.264.267-.514.423-1.09.423-1.7 0-2.144-1.851-3.882-4.136-3.882"/>
+									</g>
+								</svg>
+							</div>
+						</div>
+					</a>
+				
+					<div class="collapse navbar-collapse" id="navbarSupportedContent">
+						<ul class="navbar-nav mr-auto">
+							<li class="nav-item active">
+								<a class="menu__anchor nav-link menu__anchor--mobile" href="#">promociones</a>
+							</li>
+							<li class="nav-item">
+								<a class="menu__anchor nav-link menu__anchor--mobile" href="#">alcohol</a>
+							</li>
+							<li class="nav-item">
+								<a class="menu__anchor nav-link menu__anchor--mobile" href="#">beverages</a>
+							</li>
+							<li class="nav-item">
+								<a class="menu__anchor nav-link menu__anchor--mobile" href="#">groceries</a>
+							</li>
+							<li class="nav-item">
+								<a class="menu__anchor nav-link menu__anchor--mobile" href="#">beauty and gealdthcare</a>
+							</li>
+							<li class="nav-item">
+								<a class="menu__anchor nav-link menu__anchor--mobile" href="#">home cleaning</a>
+							</li>
+						</ul>
+					</div>
+				</nav>
+				<!--fin mobile navbar-->
+			</div>
+		</div>
+		<!--fin navbar-->
+
+		<div class="main-container">
+			<a href="https://www.wabi2b.com/" target="_blank">
+				<img class="main-container__banner img-fluid hidden-sm-down" src="images/wabi.png" alt="">
+				<img class="main-container__banner img-fluid hidden-md-up" src="images/wabi_mb.png" alt="">
+			</a>
+		</div>
+
+	</header>
+
+	<div class="container">
+
+		<section class="featured-products-component">
+
+			<header class="productlist-header row">
+					<h3 class="productlist__title col-md-9 col-sm-8 col-6">Productos en promoción</h3>
+					<button class=" col-md-3 col-sm-4 col-6 wabi-button productlist__button">
+						<span class="__txt-button">Ver Todas</span>
+						<span class="__icon-button material-icons-outlined">keyboard_arrow_right</span>
+					</button>					
+			</header>
+
+			<div class="products__grid row">
+
+				<div class="col-lg-3 col-md-4 col-sm-6">
+					<article class="product-item__grid">
+						<span class="cantidad__minima">
+							Mínimo x 1u
+						</span>
+						<img src="images/coca.png" alt="coca" class="image_product img-fluid">
+						<h4 class="product__title">NESTLE GOLD Cornflakes 14 x 500g</h4>
+						<h6 class="product__category">CORN FLAKES</h6>
+						<h5 class="product__price">$9.30</h5>
+						<!-- INICIO CART FORM  -->
+						<div class="row">
+							<div class="col-sm-4">								
+								<div class="group-cuantity green-box">
+									cx14u
+								</div>
+							</div>
+							<div class="col-sm-8">
+								<div class="green-box item-cuantity">
+									<div class="input-group ">
+										<div class="input-group-prepend">
+											<button class="btn btn-minus">
+												<span class="material-icons-outlined sign">
+													remove
+												</span>
+											</button>
+										</div>
+										<input class="form-control number-cuantity" min="0" name="quantity" value="1" type="number">
+										<div class="input-group-append">
+											<button class="btn btn-plus">
+												<span class="material-icons-outlined sign">
+													add
+												</span>
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-12">
+								<button class="wabi-button addtocart__button">
+									<span class="__txt-button">agregar a</span>
+									<span class="__icon-button material-icons-outlined">shopping_cart</span>
+								</button>	
+							</div>
+						</div>
+						<!-- FIN CART FORM  -->
+					</article>
+				</div>
+		
+				<div class="col-lg-3 col-md-4 col-sm-6">
+					<article class="product-item__grid">
+						<span class="cantidad__minima">
+							Mínimo x 1u
+						</span>
+						<img src="images/coca.png" alt="coca" class="image_product img-fluid">
+						<h4 class="product__title">NESTLE GOLD Cornflakes 14 x 500g</h4>
+						<h6 class="product__category">CORN FLAKES</h6>
+						<h5 class="product__price">$9.30</h5>
+						<!-- INICIO CART FORM  -->
+						<div class="row">
+							<div class="col-sm-4">								
+								<div class="group-cuantity green-box">
+									cx14u
+								</div>
+							</div>
+							<div class="col-sm-8">
+								<div class="green-box item-cuantity">
+									<div class="input-group ">
+										<div class="input-group-prepend">
+											<button class="btn btn-minus">
+												<span class="material-icons-outlined sign">
+													remove
+												</span>
+											</button>
+										</div>
+										<input class="form-control number-cuantity" min="0" name="quantity" value="1" type="number">
+										<div class="input-group-append">
+											<button class="btn btn-plus">
+												<span class="material-icons-outlined sign">
+													add
+												</span>
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-12">
+								<button class="wabi-button addtocart__button">
+									<span class="__txt-button">agregar a</span>
+									<span class="__icon-button material-icons-outlined">shopping_cart</span>
+								</button>	
+							</div>
+						</div>
+						<!-- FIN CART FORM  -->
+					</article>
+				</div>
+				
+				<div class="col-lg-3 col-md-4 col-sm-6">
+					<article class="product-item__grid">
+						<span class="cantidad__minima">
+							Mínimo x 1u
+						</span>
+						<img src="images/coca.png" alt="coca" class="image_product img-fluid">
+						<h4 class="product__title">NESTLE GOLD Cornflakes 14 x 500g</h4>
+						<h6 class="product__category">CORN FLAKES</h6>
+						<h5 class="product__price">$9.30</h5>
+						<!-- INICIO CART FORM  -->
+						<div class="row">
+							<div class="col-sm-4">								
+								<div class="group-cuantity green-box">
+									cx14u
+								</div>
+							</div>
+							<div class="col-sm-8">
+								<div class="green-box item-cuantity">
+									<div class="input-group ">
+										<div class="input-group-prepend">
+											<button class="btn btn-minus">
+												<span class="material-icons-outlined sign">
+													remove
+												</span>
+											</button>
+										</div>
+										<input class="form-control number-cuantity" min="0" name="quantity" value="1" type="number">
+										<div class="input-group-append">
+											<button class="btn btn-plus">
+												<span class="material-icons-outlined sign">
+													add
+												</span>
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-12">
+								<button class="wabi-button addtocart__button">
+									<span class="__txt-button">agregar a</span>
+									<span class="__icon-button material-icons-outlined">shopping_cart</span>
+								</button>	
+							</div>
+						</div>
+						<!-- FIN CART FORM  -->
+					</article>
+				</div>
+				
+				<div class="col-lg-3 col-md-4 col-sm-6">
+					<article class="product-item__grid">
+						<span class="cantidad__minima">
+							Mínimo x 1u
+						</span>
+						<img src="images/coca.png" alt="coca" class="image_product img-fluid">
+						<h4 class="product__title">NESTLE GOLD Cornflakes 14 x 500g</h4>
+						<h6 class="product__category">CORN FLAKES</h6>
+						<h5 class="product__price">$9.30</h5>
+						<!-- INICIO CART FORM  -->
+						<div class="row">
+							<div class="col-sm-4">								
+								<div class="group-cuantity green-box">
+									cx14u
+								</div>
+							</div>
+							<div class="col-sm-8">
+								<div class="green-box item-cuantity">
+									<div class="input-group ">
+										<div class="input-group-prepend">
+											<button class="btn btn-minus">
+												<span class="material-icons-outlined sign">
+													remove
+												</span>
+											</button>
+										</div>
+										<input class="form-control number-cuantity" min="0" name="quantity" value="1" type="number">
+										<div class="input-group-append">
+											<button class="btn btn-plus">
+												<span class="material-icons-outlined sign">
+													add
+												</span>
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-12">
+								<button class="wabi-button addtocart__button">
+									<span class="__txt-button">agregar a</span>
+									<span class="__icon-button material-icons-outlined">shopping_cart</span>
+								</button>	
+							</div>
+						</div>
+						<!-- FIN CART FORM  -->
+					</article>
+				</div>
+			</div>
+
+		</section>
+
+	</div>
+
+</body>
+<script>
+	$('.btn-plus, .btn-minus').on('click', function(e) {
+  const isNegative = $(e.target).closest('.btn-minus').is('.btn-minus');
+  const input = $(e.target).closest('.input-group').find('input');
+  if (input.is('input')) {
+    input[0][isNegative ? 'stepDown' : 'stepUp']()
+  }
+})
+</script>
+</html>
